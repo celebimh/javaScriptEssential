@@ -37,3 +37,9 @@ function clearInputs() {
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
 }
+
+function detetebook(){
+    books.detetebook()
+
+
+}
