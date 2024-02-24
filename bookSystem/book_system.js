@@ -26,8 +26,8 @@ function showbooks() {
     <p><strong>Author Name:</strong> ${book.authorName} </p>
     <p><strong>Book Description:</strong> ${book.bookDescription}</p>
     <p><strong>No. of Pages:</strong> ${book.pagesNumber} mins</p>
-    <h1>${index}</h1>
-    <button onclick="deleteBook()">Delete</button>`);
+   
+    <button id="${index}" onclick="deleteBook(this)">Delete</button>`);
     document.getElementById('books').innerHTML = booksDiv;
 }
 
@@ -38,8 +38,9 @@ function clearInputs() {
     document.getElementById('pagesNumber').value = '';
 }
 
-function detetebook(){
-    books.detetebook()
+function deleteBook(btn){
+    index = btn.id;
+    books.splice(index, 1);
+    showbooks();
 
-
-}
+} 
