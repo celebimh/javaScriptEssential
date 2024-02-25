@@ -36,6 +36,13 @@ function clearCompletedTasks() {
     displayTasks();
 }
 
+function clearAlTask() {
+    tleng = tasks.length;
+    tasks.splice(0,tleng);
+    displayTasks();
+
+}
+
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
